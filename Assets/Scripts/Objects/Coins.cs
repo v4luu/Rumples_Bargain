@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-    public int value = 1; // cuántos puntos da
+    public int value = 1;
+    public AudioClip coinSound;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
             PlayerStats.score += value;
+            
+            // Reproduce el sonido aunque el objeto se destruya
+            AudioSource.PlayClipAtPoint(coinSound, transform.position);
+            
             Destroy(gameObject);
         }
     }
