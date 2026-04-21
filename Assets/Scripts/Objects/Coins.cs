@@ -11,7 +11,7 @@ public class Coin : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            PlayerStats.score += value;
+            PlayerStats.coinCount += value;
             
             // Reproduce el sonido aunque el objeto se destruya
             AudioSource.PlayClipAtPoint(coinSound, transform.position);
