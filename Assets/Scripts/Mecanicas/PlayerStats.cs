@@ -44,9 +44,9 @@ public class PlayerStats : MonoBehaviour
 
         currentLives -= amount;
 
-        // debug de sonido
-        Debug.Log("AudioSource null: " + (_audioSource == null));
-        Debug.Log("DamageSound null: " + (damageSound == null));
+        // actualiza HUD
+        if (HUDManager.Instance != null)
+            HUDManager.Instance.UpdateVidas();
 
         if (_audioSource != null && damageSound != null)
             _audioSource.PlayOneShot(damageSound);

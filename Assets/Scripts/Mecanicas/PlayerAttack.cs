@@ -18,7 +18,8 @@ public class PlayerAttack : MonoBehaviour
     public void UnlockRock()
     {
         rockUnlocked = true;
-        Debug.Log("Piedra desbloqueada");
+        if (HUDManager.Instance != null)
+            HUDManager.Instance.UpdatePiedra(true);
     }
 
     void ThrowRock()

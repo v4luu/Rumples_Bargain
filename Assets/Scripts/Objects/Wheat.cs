@@ -13,9 +13,10 @@ public class Wheat : MonoBehaviour
         {
             PlayerStats.wheatCount += value;
 
-            // Reproduce el sonido aunque el objeto se destruya
-            AudioSource.PlayClipAtPoint(wheatSound, transform.position);
+            if (HUDManager.Instance != null)
+                HUDManager.Instance.UpdatePaja();
 
+            AudioSource.PlayClipAtPoint(wheatSound, transform.position);
             Destroy(gameObject);
         }
     }

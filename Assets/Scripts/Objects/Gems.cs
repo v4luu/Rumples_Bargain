@@ -13,9 +13,16 @@ public class Gems : MonoBehaviour
         {
             PlayerStats.gemCount += value;
 
-            // Reproduce el sonido aunque el objeto se destruya
-            AudioSource.PlayClipAtPoint(gemSound, transform.position);
+            if (HUDManager.Instance != null)
+            {
+                HUDManager.Instance.UpdateGemas();
 
+                // actualiza collar si ya tiene todas las gemas
+                if (PlayerStats.gemCount >= 5)
+                    HUDManager.Instance.UpdateCollar(true);
+            }
+
+            AudioSource.PlayClipAtPoint(gemSound, transform.position);
             Destroy(gameObject);
         }
     }

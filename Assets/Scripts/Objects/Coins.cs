@@ -12,10 +12,11 @@ public class Coin : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             PlayerStats.coinCount += value;
-            
-            // Reproduce el sonido aunque el objeto se destruya
+
+            if (HUDManager.Instance != null)
+                HUDManager.Instance.UpdateMonedas();
+
             AudioSource.PlayClipAtPoint(coinSound, transform.position);
-            
             Destroy(gameObject);
         }
     }

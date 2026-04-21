@@ -13,9 +13,10 @@ public class Box : MonoBehaviour
         {
             PlayerStats.boxCount += value;
 
-            // Reproduce el sonido aunque el objeto se destruya
-            AudioSource.PlayClipAtPoint(boxSound, transform.position);
+            if (HUDManager.Instance != null)
+                HUDManager.Instance.UpdateCollar(PlayerStats.gemCount >= 5);
 
+            AudioSource.PlayClipAtPoint(boxSound, transform.position);
             Destroy(gameObject);
         }
     }
