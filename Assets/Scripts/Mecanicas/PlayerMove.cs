@@ -7,11 +7,15 @@ public class PlayerMove : MonoBehaviour
     private NewInput _newInput;
     private Rigidbody2D _rb;
     public float speed;
-    
+    public Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
-        PlayerStats.score = 0;
+        PlayerStats.coinCount = 0;
+        PlayerStats.gemCount = 0;
+        PlayerStats.boxCount = 0;
+        PlayerStats.wheatCount = 0;
         _newInput = GetComponent<NewInput>();
         _rb = GetComponent<Rigidbody2D>();
     }
@@ -21,6 +25,13 @@ public class PlayerMove : MonoBehaviour
     {
         Movement();  
     }
+
+    void Update()
+    {
+        float move = Mathf.Abs(_newInput.inputX);
+        animator.SetFloat("movement", move); // corregido
+    }
+
     public void Movement() {
 
        // transform.Translate(Vector3.right * _newInput.inputX * speed * Time.deltaTime);

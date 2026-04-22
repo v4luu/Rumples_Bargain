@@ -8,6 +8,7 @@ public class MainMenu : MonoBehaviour
     public GameObject popUpIns;
     public GameObject popUpStory;
     public void PlayGame() {
+        AudioManager.Instance.PlayGameMusic();
         SceneManager.LoadScene("Level1");
     }
 

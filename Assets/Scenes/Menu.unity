@@ -1214,7 +1214,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 690884497}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 845294180}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: PlayGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &690884497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1906,8 +1918,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 225, y: -112}
-  m_SizeDelta: {x: 400, y: 3000}
+  m_AnchoredPosition: {x: 225, y: -112.49951}
+  m_SizeDelta: {x: 400, y: 1200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1393512823
 MonoBehaviour:
@@ -1929,7 +1941,18 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Aun no se gg
+  m_text: "\xBFC\xF3mo jugar?\r\n\r\nLa joven hilandera ha sido encerrada por el
+    rey en una antigua habitaci\xF3n llena de paja, con la orden de convertirla en
+    oro antes del amanecer. Para sobrevivir deber\xE1 buscar entre la paja los materiales
+    necesarios y completar el trato con el misterioso enano Rumpelstiltskin.\r\n\r\nObjetos
+    que debes recolectar: Busca en la habitaci\xF3n 4 manojos de paja y las gemas
+    necesarias para armar el collar. Estos objetos son obligatorios \u2014 sin ellos
+    no podr\xE1s completar el nivel ni cerrar el trato con el enano.\r\n\r\n\xA1Cuidado
+    con los murci\xE9lagos! La habitaci\xF3n es muy antigua y est\xE1 infestada de
+    murci\xE9lagos. Si te tocan perder\xE1s una vida. Tienes 5 vidas en total, \xA1\xFAsalas
+    con cuidado! Si encuentras una piedra podr\xE1s usarla para defenderte.\r\n\r\nControles:\r\n\r\n\u2022
+    Mover a la derecha \u2192 D\r\n\u2022 Mover a la izquierda \u2192 A\r\n\u2022
+    Saltar \u2192 Espacio\r\n\u2022 Atacar (tras obtener la piedra) \u2192 S\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 095068128807e074aa7a391284ec01d5, type: 2}
   m_sharedMaterial: {fileID: -3962125309836627824, guid: 095068128807e074aa7a391284ec01d5, type: 2}
